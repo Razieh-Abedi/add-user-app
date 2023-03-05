@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDom from "react-dom";
+import ReactDOM from "react-dom";
 import classes from "./ErrorModal.module.css";
 import Card from "./Card";
 import Button from "./Button";
@@ -27,11 +27,11 @@ const ModalOverlay = (props) => {
 const ErrorModal = (props) => {
   return (
     <React.Fragment>
-      {ReactDom.createPortal(
+      {ReactDOM.createPortal(
         <Backdrop onConfirm={props.onConfirm} />,
         document.getElementById("backdrop-root")
       )}
-      {ReactDom.createPortal(
+      {ReactDOM.createPortal(
         <ModalOverlay
           title={props.title}
           message={props.message}
